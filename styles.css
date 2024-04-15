@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(29, 29, 29);
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/assets/Montserrat-MediumItalic.ttf") format('truetype');
+    }
+    font-family: "Montserrat";
+    color: white;
+  }
+  #card {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    #display {
+      width: 80%;
+      border-radius: 20px 0 0 20px;
+      background: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      height: auto;
+      > * {
+        text-align: center;
+      }
+      #art {
+        height: 400px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        margin-top: 15px;
+      }
+    }
+    #list {
+      width: 40%;
+      border-radius: 10px 10px 10px 10px;
+      background: transparent;
+      display: flex;
+      height: auto;
+      flex-direction: column;
+      .item {
+        padding: 0 1em;
+        background: rgb(29, 29, 29);
+        transition: all .3s ease;
+        &:first-of-type {
+          border-radius: 0 20px 0px 0;
+        }
+        &:last-of-type {
+          border-radius: 0 0px 20px 20px;
+        }
+        &.is-active {
+          background: rgba(255,255,255,.5);
+          backdrop-filter: blur(30px) hue-rotate(20deg);
+          transition: all .3s ease;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .copy{
+    position: absolute;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    bottom: 50px;
+    left: auto;
+  }
