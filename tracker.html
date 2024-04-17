@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекер сна</title>
+    <link rel="stylesheet" href="tracker.css">
+    <link rel="shortcut icon" href="https://cdn.onlinewebfonts.com/svg/img_271192.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Трекер сна</h1>
+        
+        <div class="sleep-date">
+            <label for="sleep-date">Дата:</label>
+            <input type="date" id="sleep-date">
+            <button onclick="markSleep()">Отметить сон</button>
+        </div>
+
+        <div class="sleep-time">
+            <label for="sleep-time">Продолжительность сна:</label>
+            <input type="time" id="sleep-time">
+        </div>
+
+        <div class="sleep-note">
+            <label for="custom-note">Дополнительная заметка:</label>
+            <textarea id="custom-note" rows="4" cols="5"></textarea>
+        </div>
+
+        <div class="recommendations">
+            <h2>Рекомендации для улучшения сна:</h2>
+            <ul id="recommendation-list">
+                <!-- Сюда будут добавляться рекомендации -->
+            </ul>
+        </div>
+        
+        <div class="report">
+            <h3>Отчет</h3>
+            <label for="report-date">Отчет за дату:</label>
+            <input type="date" id="report-date">
+            <button onclick="showReport()">Показать отчет</button>
+            <div id="report-content">
+                <div id="report-details"></div>
+                <div id="report-notes"></div>
+            </div>
+                 
+        </div>
+    <script src="tracker.js"></script>
+</body>
+</html>
